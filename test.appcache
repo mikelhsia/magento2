@@ -1,0 +1,30 @@
+# HTML document
+<!DOCTYPE html>
+<html manifest="demo_html.appcache">
+<head> 
+	<meta charset="UTF-8">
+	<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+	<script src="demo_time.js"> </script>
+	<p id="timePara"><button onclick="getDateTime()">获取日期和时间</button></p>
+	<p><img src="logo.png" width="336" height="69"></p>
+	<p>尝试打开 <a href="tryhtml5_html_manifest.htm" target="_blank">这个页面</a>, 在离线的状态下重新载入这个页面，页面也可以访问。</p>
+</body>
+</html>
+
+# Complete Manifest document
+# CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存
+# NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存
+# FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面)
+CACHE MANIFEST
+# 2012-02-21 v1.0.0
+/theme.css
+/logo.gif
+/main.js
+
+NETWORK:
+login.php
+
+FALLBACK:
+/html/ /offline.html

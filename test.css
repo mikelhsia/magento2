@@ -1,0 +1,337 @@
+/* 如果某些属性在不同的样式表中被同样的选择器定义，那么属性值将从更具体的样式表中被继承过来。 
+	当同一个 HTML 元素被不止一个样式定义时，会使用哪个样式呢？
+	一般而言，所有的样式会根据下面的规则层叠于一个新的虚拟样式表中，其中数字 4 拥有最高的优先权。
+	1. 浏览器缺省设置
+	2. 外部样式表
+	3. 内部样式表（位于 <head> 标签内部）
+	4. 内联样式（在 HTML 元素内部）
+	因此，内联样式（在 HTML 元素内部）拥有最高的优先权，这意味着它将优先于以下的样式声明： 
+	- 标签中的样式声明，外部样式表中的样式声明，或者浏览器中的样式声明（缺省值）。
+	*/
+body{
+	font-family:arial;
+/*默认情况下 background-image 属性会在页面的水平或者垂直方向平铺。 水平方向平铺好一点
+ background-repeat:repeat-x, repeat-y, no-repeat, inherit;*/
+	/*
+	background-image:url('001.jpg');
+	background-repeat:repeat-x;
+	background-position:right bottom;
+	background-attachment: scroll fixed inherit;
+	*/
+	background:url('001.jpg') no-repeat fixed right bottom;
+}
+
+h1 {
+	color:red;
+	padding: 50px;
+}
+h3 {
+	color:#000AD2;
+	margin-top:0px;
+	/* Or using 
+	    font-size transform: 1em = 16px
+	    font:italic bold 12px/30px Georgia,serif;*/
+	font-size: 24px;
+	padding-left:20px;
+	text-align:center;
+}
+p {
+	color:white;
+	font-weight:300%;
+	background-color:red;
+	text-indent:10px;
+	white-space:nowrap; /*禁用文字环绕oline-height:200%;*/
+	line-height:200%; /*行高*/
+	letter-spacing:0.8;
+	word-spacing:0.8;
+	border:1px solid red;
+}
+p.dotted {outline-style:dotted;}
+p.dashed {outline-style:dashed;}
+p.solid {outline-style:solid;}
+p.double {outline-style:double;}
+p.groove {outline-style:groove;}
+p.ridge {outline-style:ridge;}
+p.inset {outline-style:inset;}
+p.outset {outline:outset blue 5px;}
+
+p.normal {font-variant:normal;}        /*字形变换*/
+p.small {font-variant:"small-caps";}     /*字形变换*/
+p span {
+	color:red;
+	direction:rtl; /*从右到左的书写方向*/
+}
+p #result {
+	color:blue;
+	font-size:2em;
+	font-weight:bolder;
+	padding-right:15px;
+	word-spacing: 5px;
+}
+
+#image {
+	width:30%;
+}
+
+
+.head {
+	/*
+	border-style:dotted;
+	border-style:none;
+	border-style:solid;
+	border-style:dashed;
+	border-style:groove;	定义3D沟槽边界
+	border-style:ridge;		定义3D脊边界
+	border-style:inset;		定义3D嵌入边框
+	border-style:outset;	定义3D突出边框
+	*/
+	border-style:dotted groove inset outset;
+	border-color:blue red green powderblue;
+	border-width:2px 3px 4px 5px;
+	/* 每个边都可以设置不同的边框形式
+	   border-top-style:dotted;
+	   border-right-style:solid;
+	   border-bottom-style:dotted;
+	   border-left-style:solid;
+	*/
+	/* 可包含border-width, border-style(required) border-color
+		border: 5px solid red
+	 */
+}
+
+article h1 {
+	font-size:32px;
+	border-style:dotted;
+	border-width:2px;
+	background-color:white;
+	font-transform: uppercase;
+	padding:5px;
+	margin:0px;
+    margin-top:20px;
+    text-shadow:2px 2px #FFFF00;
+}
+
+section{
+	background-color:powderblue;
+	padding:0px;
+	margin:0px;
+}
+
+article section p .ftf {
+	/*Always fallback if Font is not support*/
+	font-family: "Timese New Roman", Times, serif;
+}
+
+img.top {
+	/*Text-Top对齐的图像*/
+	vertical-align:text-top;
+}
+img.bottom {
+	/*Text-Bottom对齐的图像*/
+	vertical-align:text-bottom;
+}
+
+
+/* Link Style:
+	:link		Normal, not visited link
+	:visited	Visited link
+	:hover		Mouse over and hover
+	:active		The moment that link was clicked*/
+/** Additional rules:
+	a:hover has to place behind a:link and a:visited
+	a:active has to place behind a:hover*/
+a:link {
+	color:#FFFF00;
+	text-decoration:none;
+	background-color:#B2FF99;
+}
+a:visited {
+	color:#00FF00;
+	text-decoration:line-through;
+	background-color:#FFFF85;
+}
+a:hover {
+	color:#FF00FF;
+	text-decoration:underline;
+	background-color:#FF704D;
+}
+a:active {
+	color:#00FFFF;
+	text-decoration:underline;
+	background-color:#FF704D;
+}
+
+
+/* Unorder list and order list style */
+/*
+	* list-style:			Abbreviation
+	* list-style-image:		Image as the bullet
+	* list-style-position:	Bullet's position
+	* list-style-type:		Type of bullet;
+  ul.a {list-style-type:circle;}
+  ul.b {list-style-type:disc;}
+  ul.c {list-style-type:square;}
+
+  ol.d {list-style-type:armenian;}
+  ol.e {list-style-type:cjk-ideographic;}
+  ol.f {list-style-type:decimal;}
+  ol.g {list-style-type:decimal-leading-zero;}
+  ol.h {list-style-type:georgian;}
+  ol.i {list-style-type:hebrew;}
+  ol.j {list-style-type:hiragana;}
+  ol.k {list-style-type:hiragana-iroha;}
+  ol.l {list-style-type:katakana;}
+  ol.m {list-style-type:katakana-iroha;}
+  ol.n {list-style-type:lower-alpha;}
+  ol.o {list-style-type:lower-greek;}
+  ol.p {list-style-type:lower-latin;}
+  ol.q {list-style-type:lower-roman;}
+  ol.r {list-style-type:upper-alpha;}
+  ol.s {list-style-type:upper-latin;}
+  ol.t {list-style-type:upper-roman;}
+  ol.u {list-style-type:none;}
+  ol.v {list-style-type:inherit;}
+*/
+ul.a {
+	list-style-type: circle;
+	background-color: white;
+}
+
+ul.b {
+	/* list-style-image: url('001.jpg'); */
+	list-style-type: square;
+	background-color: white;
+}
+
+ol.c {
+	list-style-type: upper-roman;
+	background-color: white;
+}
+
+ol.d {
+	list-style-type: lower-alpha;
+	background-color: white;
+}
+
+/* Table CSS styling*/
+#customers
+{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	width:100%;
+	border-collapse:collapse; /*border-collapse 属性设置表格的边框是否被折叠成一个单一的边框或隔开：*/
+}
+#customers td, #customers th 
+{
+	font-size:1em;
+	border:1px solid #98bf21;
+	padding:3px 7px 2px 7px;
+}
+#customers th 
+{
+	font-size:1.1em;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+	background-color:#A7C942;
+	color:#ffffff;
+}
+#customers tr.alt td 
+{
+	color:#000000;
+	background-color:#EAF2D3;
+}
+
+/*分组与嵌套选择器
+ 分组：
+	h1,h2,p
+	{
+		color:green;
+	}
+
+ 嵌套：
+	p {
+		color:blue;
+		text-align:center;
+	}
+	.marked {
+		background-color:red;
+	}
+	.marked p {
+		color:white;
+	}
+ */
+
+p.dotted, p.dashed, p.solid, p.double, p.groove, p.ridge, p.inset, p.outset {
+	/* 
+	display:none;
+	display:block;		改变元素成为内连元素
+	display:inline;		改变元素成为块元素
+	*/
+	display:inline;
+	margin-left:10px;
+}
+
+p.solid {
+	/*
+	visibility:visible;
+	visibility:hidden;		隐藏元素，但是依旧占用空间，影响布局
+	visibility:collapse;	Is used to hide the table rows and columns
+	display:none;			完全隐藏该元素，切不占空间
+	*/
+	visibility:hidden;;
+}
+
+/* Dimension
+   height
+   line-height
+   max-height
+   max-width
+   min-height
+   min-width
+   width
+   */
+
+/* CSS Position
+position: static;		HTML元素的默认值，即没有定位，元素出现在正常的流中。 静态定位的元素不会受到top, bottom, left, right影响。
+position: fixed;		元素的位置相对于浏览器窗口是固定位置。 即使窗口是滚动的它也不会移动： Fixed定位使元素的位置与文档流无关，因此不占据空间。
+position: relative;		相对定位元素的定位是相对其正常位置。
+position: absolute;		绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于<html>:不占据空间.
+z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前面，或后面） 一个元素可以有正数或负数的堆叠顺序：
+
+clip:rect(0px,80px,200px,0px);  剪裁图片
+
+overflow:visible;		Is default;
+overflow:scroll;		当一个元素的内容在指定的区域过大时如何设置以适应，创建一个滚动条
+overflow:hidden;		隐藏多余的元素内容
+overflow:auto;		
+overflow-x:auto hidden scroll visible no-display no-content
+overflow-x:auto hidden scroll visible no-display no-content
+
+************* CSS Float ****************
+元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。 一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。
+浮动元素之后的元素将围绕它。 浮动元素之前的元素将不会受到影响。 如果图像是右浮动，下面的文本流将环绕在它左边：
+备注：文字和图片等任何元素皆可浮动
+float: right;
+float: left;
+
+元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性。
+clear 属性指定元素两侧不能出现浮动元素。 使用 clear 属性往文本中添加图片廊：
+clear: both;
+ */
+#t1 {
+	position:fixed;
+	top: 929px;
+	right: 50px;
+}
+
+#t2 {
+	position:relative;
+	right: -100px;
+}
+
+#t3 {
+	position:absolute;
+	right:150px;
+	bottom:100px;
+}
+

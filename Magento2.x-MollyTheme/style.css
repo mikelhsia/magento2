@@ -1,0 +1,58 @@
+#wrapper {
+  margin: 0 2% 0 25%;
+  width: 73%;
+  overflow:hidden;
+}
+body{font-size:14px;line-height:20px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;padding:0;color:#333;}
+article{max-width:944px;margin:auto}
+h1{font-size:36px;line-height:36px;margin-top:24px;margin-bottom:30px}
+h2{font-size:24px;line-height:24px;margin-top:36px;margin-bottom:24px}
+h3{font-size:20px;line-height:20px;margin-top:14px;margin-bottom:10px}
+h4{font-size: 18px; line-height:18px;margin-top:24px; margin-bottom:12px;}
+a{color:#18b6d2}
+a:hover{color: #e74c3c;}
+p,ul{margin-top:0;margin-bottom:10px}
+small,aside{font-size:10px}
+code{word-wrap:break-word}
+img {max-width: 100%;}
+.repo-stats iframe{float:right;margin-left:5px}
+.toc-h1{display:none;}
+.version{font-size:12px;background:#e74c3c;padding: 5px 10px;color:#fff;}
+#toc{top:0;left:0;height:100%;position:fixed;background:#f9f9f9;width:23%;padding-top:20px;color:#2D333D; overflow-y: scroll;}
+#toc ul{margin:0 0 20px;padding:0;list-style:none;margin-bottom: 30px;}
+#toc li{padding:5px 0px;margin:0 10px;}
+#toc a{color:#2D333D;text-decoration:none;display:block}
+#toc a:hover{color:#e74c3c;}
+#toc .toc-h2 {font-size: 18px;font-weight: bold;padding-left: 10px;border-bottom: 1px solid #e74c3c;}
+#toc .toc-h3{padding-left:20px}
+#toc .toc-active{background:none repeat scroll 0 0 #e74c3c;}
+#toc .toc-active a{color: #FFF;}
+pre{display:block;padding:.5em;background:#333;color:#f8f8f8; word-wrap: break-word; font-size: 14px;}
+pre .shebang,pre .comment,pre .template_comment,pre .javadoc{color:#7c7c7c}pre .keyword,pre .tag,pre .ruby .function .keyword,pre .tex .command{color:#96cbfe}pre .function .keyword,pre .sub .keyword,pre .method,pre .list .title{color:#ffffb6}pre .string,pre .tag .value,pre .cdata,pre .filter .argument,pre .attr_selector,pre .apache .cbracket,pre .date{color:#a8ff60}pre .subst{color:#daefa3}
+pre .regexp{color:#e9c062}
+pre .function .title,pre .sub .identifier,pre .pi,pre .decorator,pre .ini .title,pre .tex .special{color:#ffffb6}pre .class .title,pre .haskell .label,pre .constant,pre .smalltalk .class,pre .javadoctag,pre .yardoctag,pre .phpdoc,pre .nginx .built_in{color:#ffffb6}pre .symbol,pre .ruby .symbol .string,pre .ruby .symbol .keyword,pre .ruby .symbol .keymethods,pre .number,pre .variable,pre .vbscript,pre .literal{color:#c6c5fe}
+pre .css .tag{color:#96cbfe}pre .css .rules .property,pre .css .id{color:#ffffb6}
+pre .css .class{color:#FFF}
+pre .hexcolor{color:#c6c5fe}
+pre .number{color:#ff73fd}
+pre .tex .formula{opacity:.7}
+hr{border:none; border-top:1px solid #e74c3c}
+hr.color{border-top:1px solid #e74c3c}
+.cms-list{border:1px solid #e5ae49; width:800px; border-bottom:none}
+.cms-list th, .cms-list td{text-align:left; padding:3px 10px; border-bottom:1px solid #e5ae49; width:50%}
+.cms-list tr th:first-child, .cms-list tr td:first-child{border-right:1px solid #e5ae49}
+.cms-list tr td:last-child{font-weight:bold}
+.cms-list tr.even td{background:#ffd966}
+div.note{background:#f2dbdb; border:1px solid red; padding:10px 20px}
+div.note p{margin:0}
+div.code{overflow:hidden; }
+xmp{font-size:12px; text-align:left; line-height:14px; background:#fbe9b2; padding:10px; margin:0 0 10px; overflow: auto; width: 100%; max-height: 300px;}
+.blue{color:#18b6d2;}
+.pink{color:#e74c3c;}
+.block-onsection {
+	padding-left: 40px;
+}
+img.img-border {
+	border: 1px solid #eeeeee;
+	margin: 10px 0;
+}

@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Molly Magento 2 Theme Documentation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="style.css"/>
+		<script src="jquery.js"></script>
+		<script type="text/javascript" src="jquery.fancybox-1.3.4.js"></script>
+		<link rel="stylesheet" href="jquery.fancybox-1.3.4.css"/>
+		<script src="toc.js"></script>
+	</head>
+	<body>
+		<div id="toc">
+			
+			<p>&copy; Arrowhitech JSC 2015.</p>
+		</div>
+
+		<div id="wrapper">
+			<!-- Overview -->
+			<h2 style="display:none;">Overview</h2>
+			<h1><span class="pink">Molly 2</span> Documentation <span class="version">v1.0</span></h1>
+			<p>ArrowHiTech Jsc has achieved more than 6 years of experience working on Magento commerce and completed 2000+ Magento projects so far. Thanks to our rich experience in the realm, our proficient team of Magento developers and managers have designed and developed a lot of useful extensions exploiting great features of Magento. </p>
+			<p>Version: 1.7+<br>
+			Author: <a href="http://magesolution.com/" target="_blank">Magesolution</a>.<br>
+
+			<hr/>
+			<!-- Installation -->
+			<h2>Install Magento</h2>
+			<p>If you haven't got a Magento website yet, you will have to install a copy of Magento Community Edition open source e-commerce web application before using Molly Responsive Magento theme.</p>
+			
+			<p>If you already have installed Magento you can skip this section</p>
+			<p>To install Magento, follow these steps:</p>
+			<ul>
+				<li>Check if your server is compatible with Magento 2. Find detailed instructions here - <a href="http://devdocs.magento.com/guides/v2.0/install-gde/system-requirements.html" target="_blank">http://devdocs.magento.com/guides/v2.0/install-gde/system-requirements.html</a></li>
+				<li>Download Magento 2: You can download magento 2 here: <a href="https://www.magentocommerce.com/download" target="_blank">https://www.magentocommerce.com/download</a>. If you want to use sample data please download "<strong>Full Release with Sample Data (ZIP with sample data)</strong>" package, if not please download "<strong>Full Release (ZIP with no sample data)</strong>" package</li>
+				<li>Transfer the Magento archive to your server: <a href="http://devdocs.magento.com/guides/v2.0/install-gde/prereq/zip_install.html#zip-transfer">http://devdocs.magento.com/guides/v2.0/install-gde/prereq/zip_install.html#zip-transfer</a></li>
+				<li>Extract the software on your server: <a href="http://devdocs.magento.com/guides/v2.0/install-gde/prereq/zip_install.html#zip-extract">http://devdocs.magento.com/guides/v2.0/install-gde/prereq/zip_install.html#zip-extract</a></li>
+				<li>Set file system ownership and permissions: <a href="http://devdocs.magento.com/guides/v2.0/install-gde/prereq/zip_install.html#zip-perms">http://devdocs.magento.com/guides/v2.0/install-gde/prereq/zip_install.html#zip-perms</a></li>
+				<li>Running the Setup Wizard: <a href="http://devdocs.magento.com/guides/v2.0/install-gde/install/web/install-web.html#instgde-install-magento-web" target="_blank">http://devdocs.magento.com/guides/v2.0/install-gde/install/web/install-web.html#instgde-install-magento-web</a></li>
+				<li>When your Magento installation is completed successfully you can start theme installation procedure.</li>
+			</ul>
+			<hr class="color"/>
+			<!-- end install magento -->	
+			<!-- start install theme -->
+			<h2>1. Install Theme</h2>
+				
+			<h3>1.1 Upload Pack</h3>
+				
+			<p>Using a FTP client to upload content of "Upload" folder to the root folder on your Web Server (usually named public_html).</p>
+			<img src="images/ftp.jpg"/><br/>
+			
+			<hr class="color"/>
+			<h3>1.2 Refresh Cache</h3>
+			<p>Go to <b>System -> Cache management</b>. Select all, choose refresh action and submit.</p>
+			<br/>
+			
+			<hr class="color"/>
+			<h3>1.3 Enable Module and Deploy theme</h3>
+			<ul>
+				<li>Login to your server with your SSH account</li>
+				<li>Switch to apache user</li>
+				<li>Change to magento root directory</li>
+				<li>Run command line: <b>bin/magento module:enable MGS_Mpanel</b> (or: <b>php bin/magento module:enable MGS_Mpanel</b> if first comand not work)</li>
+				<li>Run command line: <b>bin/magento module:enable MGS_Mmegamenu</b> (or: <b>php bin/magento module:enable MGS_Mmegamenu</b> if first comand not work)</li>
+				<li>Run command line: <b>bin/magento module:enable MGS_Portfolio</b> (or: <b>php bin/magento module:enable MGS_Portfolio</b> if first comand not work)</li>
+				<li>Run command line: <b>bin/magento module:enable MGS_Social</b> (or: <b>php bin/magento module:enable MGS_Social</b> if first comand not work)</li>
+				<li>Run command line: <b>bin/magento module:enable MGS_Testimonial</b> (or: <b>php bin/magento module:enable MGS_Testimonial</b> if first comand not work)</li>
+				<li>Run command line: <b>bin/magento setup:upgrade</b> (or: <b>php bin/magento setup:upgrade</b> if first comand not work)</li>
+				<li>Run command line: <b>bin/magento setup:static-content:deploy</b> (or: <b>php bin/magento setup:static-content:deploy</b> if first comand not work)</li>
+			</ul>
+			<h3>1.4 Install Sample Data</h3>
+			<ul>
+				<li>Login to your server with your SSH account</li>
+				<li>Switch to apache user</li>
+				<li>Change to magento root directory</li>
+				<li>Run command line: <b>bin/magento module:enable MGS_Mollysampledata</b> (or: <b>php bin/magento module:enable MGS_Mollysampledata</b> if first comand not work)</li>
+				<li>Run command line: <b>bin/magento setup:upgrade</b> (or: <b>php bin/magento setup:upgrade</b> if first comand not work)</li>
+			</ul>
+			<br/>
+			
+			<hr class="color"/>
+			<h3>1.5 Set Theme</h3>
+			<p>Go to <b>Stores -> Configuraton -> Design [General section]</b></p>
+			<p>At Design Theme, choose "<b>Molly</b>" theme, Save config</p>
+			<img src="images/set-theme.png" alt=""/><br/>
+			
+			<h4></h4>
+			
+			
+			<h2>2. Install Full Demo</h2>
+			<p>To import full demo, first, you need install Magento, install theme (Please read <b>Install Magento</b> and <b>Install Theme</b>) then download database and media of the theme:</p>
+			
+			<p>Database: <a href="http://www.magesolution.com/themes/molly2/demo_data/molly2.sql.gz">http://www.magesolution.com/themes/molly2/demo_data/molly2.sql.gz</a></p>
+			<p>Media: <a href="http://www.magesolution.com/themes/molly2/demo_data/media.zip">http://www.magesolution.com/themes/molly2/demo_data/media.zip</a></p>
+			
+			
+			<br/><br/>
+			<p>After download sql file and media file, please import sql file you have downloaded to your phpmyadmin:</p>
+			
+			<ul>
+				<li>Go to Cpanel -> My SQL Database<br/><img src="images/database.png" alt=""/><br/><br/></li>
+				<li>Create new database<br/><img src="images/create_new_db.png" alt=""/><br/><br/></li>
+				<li>Create new account of database<br/><img src="images/create_new_user.png" alt=""/><br/><br/></li>
+				<li>Assign database to user<br/><img src="images/add_user.png" alt=""/><br/><br/></li>
+				<li>Set permissions for user<br/><img src="images/permission.png" alt=""/><br/><br/></li>
+				<li>Go back to cpanel and go to phpmyadmin<br/><img src="images/cpanel.png" alt=""/><br/><br/></li>
+				<li>Click to database you have created<br/><img src="images/phpmyadmin.png" alt=""/><br/><br/></li>
+				<li>Click Import<br/><img src="images/click-import.png" alt=""/><br/><br/></li>
+				<li>Click "Browse..." button and choose the database you have downloaded<br/><img src="images/import.png" alt=""/><br/><br/></li>
+				<li>Click "Go" button to import database</li>
+				<li>After import database, please find and go to database table name <b>core_config_data</b><br/><img src="images/config_data.png" alt=""/><br/><br/></li>
+				<li>Find 2 records with <b>path</b> are <b>web/unsecure/base_url</b> and <b>web/secure/base_url</b><br/><img src="images/config_url.png" alt=""/><br/><br/></li>
+				<li>Edit value of them to your site url, eg:<br/><img src="images/url_site.png" alt=""/><br/><br/></li>
+				<li>Open the file: app/etc/env.php on your host:<br/></li>
+				<li>Edit user, password, database name of the database you have created:<br/><img src="images/config_user.png" alt=""/><br/><br/></li>
+				<li>Save this file and upload to your host again</li>
+				<li>Unzip <b>media.zip</b> file you have downloaded then you will get an folder name <b>media</b></li>
+				<li>Upload this folder to "pub" folder in magento root folder</li>
+				<li>Done, now the full demo data of the theme have installed on your site</li>
+			</ul>
+			<br/>
+			
+			
+			<hr class="color"/>
+			<h2>3. Add Content To Homepage</h2>
+			<h3>3.1 Change Header Version</h3>
+			1. Go go admin Content -> MGS -> Theme Setting -> Select store view you want to use.
+			2. Choose Header version.
+			<img src="images/header_ver1.jpg"/><br/><br/>
+			<h3>3.2 Edit Home Page </h3>
+			<p>Go to Back-End -> Menu -> Content -> Pages -> Select CMS page as Homepage -> Import code or edit code</p><br/><br/>
+			<h3>3.3 Add Static Block To Homepage</h3>
+			Import width code<br/><br/>
+<xmp>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="static_block_identifier"}}
+</xmp><br/><br/>
+			<h3>3.4 Add revolution slider </h3>
+			On Admin edit homepage -> click Insert Widget
+			<img src="images/cslider.png"/><br/><br/>
+			<img src="images/cslider2.png"/><br/>
+			<hr class="color"/>
+			<h2>4. Molly Home Page Setup</h2>
+			<strong>Note: To change version homepage for your store view, you make follow:</strong>
+			<strong>Go to admin Stores -> Configuration then make follow below:</strong>
+			<img src="images/changehome.png"/><br/>
+			<strong>Last click "Save Config" button.</strong>
+			<h3>4.1 Home page 1</h3>
+			<strong>All content in cms page of homepage 5 is covered by:</strong>
+<xmp>
+<div class="home1">
+<div class="container">
+</div>
+</div>
+</xmp>
+			<ul>
+				<li><b>Header version:</b> Header 1</li>
+				<li><b>Layout:</b> 1 column</li>
+				<li><b>Revolution Slider:</b> slider_id="2"</li>
+			</ul>
+			<img src="images/home_page_1.png"/><br/><br/>
+			<h4>Block 1: Vertical Menu</h4>
+			1. Go to admin content -> MGS -> Megamenu -> Click Add Menu.
+			2. Create new Vertical Menu
+			<img src="images/vertical_menu.jpg"/><br/>
+			<ul>Custom</li>
+				<li>Title: Input title menu</li>
+				<li>Menu Type:  Select Vertical Menu<br>
+				<li>Custom Class: If you want custom menu, you can add custom class.</li>
+				<li>Status: Enable</li>
+			</ul>
+			3. Click Save
+			4. On list menu in your site -> Coppy code on row "Code to add to Static blocks" of your menu.
+			5. Menu -> Content -> Block -> Add new Block
+			<img src="images/vertical_menu1.png"/><br/>
+			<ul>Custom Static Block</li>
+				<li>Identifier: molly_vertical_menu</li>
+				<li>Content -> Hide Editor -> Add code
+					<ul>
+						<li>
+<xmp>
+<div class="vertical-menu-home">
+<div class="vertical-title">
+<h5>Brownse Category</h5>
+<div class="fa-icon">&nbsp;</div>
+</div>
+<div class="vertical-menu-content">{{block class="MGS\Mmegamenu\Block\Vertical" menu_id="2" template="MGS_Mmegamenu::vertical.phtml"}}</div>
+</div>
+</xmp>
+						</li>
+						<li>
+							Content on div(vertical-menu-content) add your code coppy before.
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<h4>Block 2: 3 service box block</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="col-md-4 col-sm-4 col-xs-12">
+	<div class="service-inline"><span class="icon pe-7s-box2">&nbsp;</span>
+		<h5 class="title">FREE SHIPPING ON ALL ORDRES</h5>
+		<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+	</div>
+</div>
+	<div class="col-md-4 col-sm-4 col-xs-12">
+		<div class="service-inline"><span class="icon pe-7s-wallet">&nbsp;</span>
+		<h5 class="title">AMAZING CUSTOMER SERVICE</h5>
+		<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+	</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+	<div class="service-inline"><span class="icon pe-7s-delete-user">&nbsp;</span>
+		<h5 class="title">NO CUSTOMS OR DUTY FEES</h5>
+		<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+	</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+			<h4>Block 3: New Products of Categories Block</h4>
+			<p>Insert this code to the homepage follow revolution</p>
+<xmp>
+{{block class="MGS\Mpanel\Block\Products\Category\NewProducts" title="NEW ARRIVALS" category_ids="4,5,6" products_count="8" per_row="4" custom_class="tabs-colon" nav="true" dots="false" autoplay="0" note_text="Trending Fashion In This Season" template="products/category/tabs-slider-new.phtml}}
+</xmp>
+			<b>Custom tabs</b>
+			<ul>
+				<li><b>Title Block:</b> title</li>
+				<li><b>Small text under Title block:</b> note_text</li>
+				<li><b>Categories to show:</b> category_ids</li>
+				<li><b>Number product to show:</b> products_count</li>
+				<li><b>Number product to show per row:</b> per_row</li>
+				<li><b>Show button next and previous:</b> nav(bool)</li>
+				<li><b>Show pagination dot:</b> dots(bool)</li>
+				<li><b>Show Load more button:</b> load_more</li>
+			</ul>
+			<h4>Block 4: Shop By Categories Static Block (Horizontal vs Vertical)</h4>
+			<p>Create static block with code: </p>
+<xmp>
+	<div class="promo-static padding-5">
+<div class="title-center">
+<h3 class="heading"><span>SHOP BY CATEGORIES</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>
+<div class="row categories-landding">
+<div class="col-md-6 col-sm-12 col-xs-12">
+<div class="row row-pd5">
+<div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
+<div class="cate-content vertical"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/categories_1_1.jpg"}}" alt="" /></a>
+<div class="text">
+<h2 class="cate-name">Fashion</h2>
+<p class="text-desc">(15 products)</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12 hidden-xs">
+<div class="cate-content vertical"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/categories_1_2.jpg"}}" alt="" /></a>
+<div class="text">
+<h2 class="cate-name">Interior</h2>
+<p class="text-desc">(23 products)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 col-xs-12">
+<div class="cate-content horizontal"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/categories_1_4.jpg"}}" alt="" /></a>
+<div class="text">
+<h2 class="cate-name">Accessories<span class="text-desc">&nbsp;(9 products)</span></h2>
+</div>
+</div>
+<div class="cate-content horizontal"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/categories_1_3.jpg"}}" alt="" /></a>
+<div class="text">
+<h2 class="cate-name">Office<span class="text-desc">&nbsp;(20 products)</span></h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+			<h4>Block 5: Banner "Do you love us?"</h4>
+			<p>Create static block with code: </p>
+<xmp>
+	<div class="promo-banner hidden-xs"><a><img class="img-responsive" src="http://magesolution.com/molly/media/promobanners/banner_home_2.jpg" alt="Molly Banner Buy Theme" /></a>
+<div class="text-container text-right">
+<div class="text-hover"><span class="h1 text-desc" style="font-weight: 300;"> <span style="font-style: normal; color: #72584b;">Do You Love Us?</span> <span style="color: #444444;">Puschase This Theme!</span> </span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu pulvinar massa.</p>
+</div>
+<div class="view-more"><button class="btn btn-primary btn-lg btn-promo-banner" style="background-color: #a0522d; border-color: #A0522D;" onclick="setLocation('')"><span>Purchase</span></button></div>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+			<h4>Block 5: Blog Update</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="title-center">
+<h3 class="heading"><span>BLOG UPDATES</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>
+<div class="padding30">&nbsp;</div>
+<div class="text-center">
+<div class="widget-latest-post">
+<div class="row">
+<div id="latest-post-carousel" class="latest-post-carousel">
+<div class="item blog-view-container col-md-6 col-sm-6 col-xs-12">
+<div class="latest-post-img"><a class="blog_link_img" href="#"> <img class="img-responsive" src="http://magesolution.com/molly/media/blog/blog_thumb_tl2_9.jpg" alt="" /> </a> <a class="read-more" href="#"><span class="fa fa-search">&nbsp;</span>Read more</a>
+<div class="day-desc"><span class="day">14</span> <span class="month">Dec</span></div>
+</div>
+<div class="latest-post-decs">
+<div class="latest-name"><a href="http://magesolution.com/molly/blog/another-post-with-gallery/">Another post with gallery</a></div>
+<div class="latest-date">
+<div class="post-info text-desc"><span class="user-author">Justin Nguyen</span> <span><a class="comments" href="#">1 Comment</a></span></div>
+</div>
+<p class="short-content">Cras ut magna quis metus tristique vulputate. Ut a sapien scelerisque, fermentum lorem a, aliquet mi. Ut lobortis lorem nisl, vel euismod ligula or...</p>
+</div>
+</div>
+<div class="item blog-view-container col-md-6 col-sm-6 col-xs-12">
+<div class="latest-post-img"><a class="blog_link_img" href="#"> <img class="img-responsive" src="http://magesolution.com/molly/media/blog/blog_thumb_tl2_1.jpg" alt="" /> </a> <a class="read-more" href="http://magesolution.com/molly/blog/another-post-with-gallery1/"><span class="fa fa-search">&nbsp;</span>Read more</a>
+<div class="day-desc"><span class="day">14</span> <span class="month">Dec</span></div>
+</div>
+<div class="latest-post-decs">
+<div class="latest-name"><a href="#">Another post with gallery</a></div>
+<div class="latest-date">
+<div class="post-info text-desc"><span class="user-author">Justin Nguyen</span> <span><a class="comments" href="#">4 Comments</a></span></div>
+</div>
+<p class="short-content">Cras ut magna quis metus tristique vulputate. Ut a sapien scelerisque, fermentum lorem a, aliquet mi. Ut lobortis lorem nisl, vel euismod ligula or...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+			<h4>Block 6: Newsletter</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="col-md-6 col-sm-12 col-xs-12 no-padding">
+<div class="newletter-center">
+<div class="text">
+<h3 class="heading"><span>NEWSLETTER</span></h3>
+<p>Sign up to receive the coupon 15% off for your first purchase via email and get informations about bicycle.</p>
+</div>
+{{block class="Magento\Newsletter\Block\Subscribe" template="subscribe.phtml"}} <br />
+<p class="text-desc">*Discount applies only to orders over $100</p>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+			<h4>Block 7: Banner (right newsletter)</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="promo-banner col-md-6 col-sm-12 col-xs-12 no-padding"><a><img class="img-responsive" src="http://magesolution.com/molly/media/promobanners/banner_l_s.jpg" alt="Molly Banner Right Newsletter Center" /></a>
+<div class="text-container text-right">
+<div class="text-hover"><span class="h1" style="font-size: 50px; color: #fff;">SALE OFF</span> <span class="h1" style="font-size: 50px; color: #fff;">UP TO <span style="color: #000;">50%</span></span>
+<p style="font-size: 20px; font-weight: 900; color: #fff;">SUMMER FINAL SALE OFF</p>
+</div>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+			<h4>Block 8: On Sale</h4>
+			<p><b>Step 1: Create Sale Attribute</b></p>
+			<p>Go to Back-End -> Menu -> Store -> Product -> Add new attribute -> Add sale attribute (Yes/No)</p>
+			<p><b>Step 2: Set Attribute</b></p>
+			<p>Go to Back-End -> Menu -> Store -> Attribute Set -> Select Groups -> Add sale attribute -> drag the attributes "Sale" from 'Unassigned Attributes' to 'Groups'</p>
+			<img src="images/attr.png"/><br/>
+			<p><b>Step 3: Reindex data</b></p>
+			<em>If you have save attribute please overlook step 1,2 and 3</em>
+			<p><b>Step 4: Update products you want to show as sale product with attribute sale</b></p>
+			<p><b>Final: Add code to cms home page</b></p>
+<xmp>
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">{{block class="MGS\Mpanel\Block\Products\Attributes" attribute="sale" title="On Sale" products_count="3" custom_class="attribute-slide" template="products/list.phtml"}}</div>
+</xmp>
+			<b>Custom Block list product</b>
+			<ul>
+				<li><b>Title Block:</b> title</li>
+				<li><b>Show product has attribute:</b> attribute</li>
+				<li><b>Number product to show:</b> products_count</li>
+				<li><b>Custom class:</b> attribute</li>
+			</ul>
+			<h4>Block 9: Featured</h4>
+				Follow example sale block with attribute sale
+			<h4>Block 10: New Product</h4>
+				Follow example sale block with attribute sale
+			<hr class="color"/>
+			<h3>4.2 Home page 2</h3>
+			<strong>All content in cms page of homepage 5 is covered by:</strong>
+<xmp>
+<div class="home2">
+</div>
+</xmp>
+			<ul>
+				<li><b>Header version:</b> Header 2</li>
+				<li><b>Layout:</b> 1 column</li>
+				<li><b>Revolution Slider:</b> slider_id="1"</li>
+			</ul>
+			<img src="images/home_page_2.png"/><br/><br/>
+			<h4>Block 1: New Products of Categories Block</h4>
+			<p>Insert this code to the homepage follow revolution</p>
+<xmp>
+<div class="container">
+<div class="row">{{block class="MGS\Mpanel\Block\Products\Category\NewProducts" title="NEW ARRIVALS" category_ids="4,5,6" products_count="8" per_row="4" custom_class="tabs-colon" nav="true" dots="false" autoplay="0" note_text="Trending Fashion In This Season" template="products/category/tabs-slider-new.phtml}}</div>
+</div>
+</xmp>
+			<b>Custom tabs</b>
+			<ul>
+				<li><b>Title Block:</b> title</li>
+				<li><b>Small text under Title block:</b> note_text</li>
+				<li><b>Categories to show:</b> category_ids</li>
+				<li><b>Number product to show:</b> products_count</li>
+				<li><b>Number product to show per row:</b> per_row</li>
+				<li><b>Show button next and previous:</b> nav(bool)</li>
+				<li><b>Show pagination dot:</b> dots(bool)</li>
+				<li><b>Show Load more button:</b> load_more</li>
+			</ul>
+			<h4>Block 2: Shop by categories</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="promo-static padding-5">
+<div class="title-inline">
+<h3 class="heading"><span>SHOP BY CATEGORIES</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>
+<div class="row categories-landding">
+<div class="cate-content horizontal col-sm-6 col-xs-12"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/shop_by_cate_home1_1.jpg"}}" alt="" /></a>
+<div class="text">
+<h2 class="cate-name">Fashion <span class="text-desc">(15 products)</span></h2>
+</div>
+</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/shop_by_cate_home1_2.jpg"}}" alt="" /></a>
+<div class="text">
+<h2 class="cate-name">Interior <span class="text-desc">(9 products)</span></h2>
+</div>
+</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/shop_by_cate_home1_3.jpg"}}" alt="" /></a>
+<div class="text">
+<h2 class="cate-name">Office <span class="text-desc">(25 products)</span></h2>
+</div>
+</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/shop_by_cate_home1_4.jpg"}}" alt="" /></a>
+<div class="text">
+<h2 class="h1 cate-name">Accessories <span class="text-desc">(18 products)</span></h2>
+</div>
+</div>
+</div>
+</div>
+</xmp>
+<xmp>
+			<p>Add static block to cms page as homepage</p>
+<div class="container">
+<div class="row">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="CATEGORIE BLOCK IDENTIFIER"}}</div>
+</div>
+</xmp>
+			<h4>Block 3: Service</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="service-inline"><span class="icon pe-7s-box2">&nbsp;</span>
+<h5 class="title">FREE SHIPPING ON ALL ORDRES</h5>
+<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="service-inline"><span class="icon pe-7s-wallet">&nbsp;</span>
+<h5 class="title">AMAZING CUSTOMER SERVICE</h5>
+<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="service-inline"><span class="icon pe-7s-delete-user">&nbsp;</span>
+<h5 class="title">NO CUSTOMS OR DUTY FEES</h5>
+<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+<xmp>
+<div class="service-static">
+<div class="container">
+<div class="row">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="SERVICE BLOCK IDENTIFIER"}}</div>
+</div>
+</div>
+</xmp>
+			<h4>Block 4: Promo Banner</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="col-md-4 col-sm-6 col-xs-12 hidden-xs button-border-hover-colour-peru">
+<div class="promo-banner"><a><img class="img-responsive" src="{{media url="wysiwyg/banner_home_1_1.jpg"}}" alt="" /></a>
+<div class="text-container text-right">
+<div class="text-hover">
+<p class="text-desc" style="font-size: 30px; font-style: italic; line-height: 23px; color: #fff;">brand-new</p>
+<span class="h1" style="color: #cd853f;">COLLECTION</span> <span class="h1" style="color: #fff;">2015</span></div>
+<div class="view-more"><button class="btn btn-primary btn-lg btn-promo-banner" onclick="setLocation('')"><span>Shop now</span></button></div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12 hidden-xs button-border-hover-colour-salmon">
+<div class="promo-banner"><a><img class="img-responsive" src="{{media url="wysiwyg/banner_home_1_2.jpg"}}" alt="" /></a>
+<div class="text-container text-right">
+<div class="text-hover"><span class="h1" style="font-size: 48px; color: #f08080;">SALE OFF</span> <span class="h1">UP TO 30%</span></div>
+<div class="view-more"><button class="btn btn-primary btn-lg btn-promo-banner" onclick="setLocation('')"><span>Shop now</span></button></div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12 hidden-xs">
+<div class="promo-banner"><a><img class="img-responsive" src="{{media url="wysiwyg/banner_home_1_3.jpg"}}" alt="" /></a>
+<div class="text-container text-left">&nbsp;</div>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+<xmp>
+<div class="service-static">
+<div class="container">
+<div class="row">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="SERVICE BLOCK IDENTIFIER"}}</div>
+</div>
+</div>
+</xmp>
+			<h4>Block 5: On Sale</h4>
+			<p><b>Step 1: Create Sale Attribute</b></p>
+			<p>Go to Back-End -> Menu -> Store -> Product -> Add new attribute -> Add sale attribute (Yes/No)</p>
+			<p><b>Step 2: Set Attribute</b></p>
+			<p>Go to Back-End -> Menu -> Store -> Attribute Set -> Select Groups -> Add sale attribute -> drag the attributes "Sale" from 'Unassigned Attributes' to 'Groups'</p>
+			<img src="images/attr.png"/><br/>
+			<p><b>Step 3: Reindex data</b></p>
+			<em>If you have save attribute please overlook step 1,2 and 3</em>
+			<p><b>Step 4: Update products you want to show as sale product with attribute sale</b></p>
+			<p><b>Final: Add code to cms home page</b></p>
+<xmp>
+<div class="text-left container-fluid">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="PROMO BANNER BLOCK IDENTIFIER"}}</div>
+</xmp>
+			<b>Custom Block list product</b>
+			<ul>
+				<li><b>Title Block:</b> title</li>
+				<li><b>Show product has attribute:</b> attribute</li>
+				<li><b>Number product to show:</b> products_count</li>
+				<li><b>Custom class:</b> attribute</li>
+			</ul>
+			<h4>Block 6: Featured</h4>
+				Follow example sale block with attribute featured
+			<h4>Block 7: New Product</h4>
+				Follow example sale block with attribute new
+			<h4>Block 8: Testimonials</h4>
+			<p>Go to Back-End -> Menu -> Testimonials -> Manage Items -> Add item to add new or edit Testimonials</p>
+			<p><b>To show testimonials to homepage you can add code to cms home page</b></p>
+<xmp>
+<div style="background-image: url('{{media url="wysiwyg/bg_testimonial_home1.jpg"}}'); background-repeat: no-repeat; background-size: cover; background-position: center center; padding-top: 75px; padding-bottom: 70px;">{{block class="MGS\Testimonial\Block\Testimonial" testimonials_count="3" row="1" custom_class="testimonial-slide" nav="true" dots="true" autoplay="false" template="slide.phtml"}}</div>
+</xmp>
+			<b>Custom Testimonials</b>
+			<ul>
+				<li><b>Number testimonials to show:</b> testimonials_count</li>
+				<li><b>Small text under Title block:</b> note_text</li>
+				<li><b>Slider auto play:</b> nav(bool)</li>
+				<li><b>Show button next and previous:</b> nav(bool)</li>
+				<li><b>Show pagination dot:</b> dots(bool)</li>
+				<li><b>Custom Class:</b> custom_class</li>
+			</ul>
+			<h4>Block 9: Office Things</h4>
+			<h4>Block 10: New Collection 2015</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="new_collection" style="color: #f7f7f7;"><span class="h1 big-text">NEW COLLECTION 2015</span>
+<p class="text-desc">Fashion for Guys &amp; Ladies</p>
+<br /> <button class="btn btn-default btn-lg" onclick="setLocation('#')" type="button">VIEW COLLECTION</button></div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+<xmp>
+<div style="background-image: url('img-background'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+	{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="NEW COLLECTION 2015 BLOCK IDENTIFIER"}}
+</div>
+</xmp>		
+			<h4>Office things</h4>
+			<p><b>Add code to cms home page</b></p>
+<xmp>
+<div class="container">
+<div class="row">{{block class="MGS\Mpanel\Block\Products\Attributes" attribute="office_things" title="OFFICE THINGS" products_count="8" per_row="5" note_text="Lorem ipsum dolor sit amet" nav="true" dots="false" autoplay="false" template="products/slide/simple.phtml"}}</div>
+</div>
+</xmp>
+			<b>Custom Testimonials</b>
+			<ul>
+				<li><b>Number product to show:</b> products_count</li>
+				<li><b>Number product per row:</b> per_row</li>
+				<li><b>Small text right Title block:</b> note_text</li>
+				<li><b>Slider auto play:</b> nav(bool)</li>
+				<li><b>Show button next and previous:</b> nav(bool)</li>
+				<li><b>Show pagination dot:</b> dots(bool)</li>
+				<li><b>Custom Class:</b> custom_class</li>
+			</ul>
+			<h4>Block 9: Office Things</h4>
+			<h4>Block 10: New Collection 2015</h4>
+			<p>Create static block with code: </p>
+			
+			<h3>4.3 Home page 3</h3>
+			<strong>All content in cms page of homepage 5 is covered by:</strong>
+<xmp>
+<div class="home3">
+<div class="container">
+</div>
+</div>
+</xmp>
+			<ul>
+				<li><b>Header version:</b> Header 3</li>
+				<li><b>Layout:</b> 1 column</li>
+				<li><b>Revolution Slider:</b> slider_id="3"</li>
+			</ul>
+			<img src="images/home_page_3.jpg"/><br/><br/>
+			<h4>Block 1: Revolution Slider Block</h4>
+			<p>You can add the widget in "Cms Page" to add revolution slider that you created.</p>
+			
+			<h4>Block 2: Service Static Block</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="service-inline"><span class="icon pe-7s-box2">&nbsp;</span>
+<h5 class="title">FREE SHIPPING ON ALL ORDRES</h5>
+<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="service-inline"><span class="icon pe-7s-wallet">&nbsp;</span>
+<h5 class="title">AMAZING CUSTOMER SERVICE</h5>
+<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12">
+<div class="service-inline"><span class="icon pe-7s-delete-user">&nbsp;</span>
+<h5 class="title">NO CUSTOMS OR DUTY FEES</h5>
+<p class="content">Get Free Shipping on all orders over $75 and free returns to our UK returns centre! Items are dispatched from the US and will arrive in 5-8 days.</p>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+<xmp>
+ {{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home2_molly_service"}}
+</xmp>
+			<h4>Block 3: New Products of Categories Block</h4>
+			<p>Insert this code to the homepage follow revolution</p>
+<xmp>
+{{block class="MGS\Mpanel\Block\Products\Category\NewProducts" title="NEW ARRIVALS" category_ids="4,5,6" products_count="8" per_row="4" custom_class="tabs-colon" nav="true" dots="false" autoplay="0" note_text="Trending Fashion In This Season" template="products/category/tabs-slider-new.phtml}}      
+</xmp>
+			<b>Custom tabs</b>
+			<ul>
+				<li><b>Title Block:</b> title</li>
+				<li><b>Small text under Title block:</b> note_text</li>
+				<li><b>Categories to show:</b> category_ids</li>
+				<li><b>Number product to show:</b> products_count</li>
+				<li><b>Number product to show per row:</b> per_row</li>
+				<li><b>Show button next and previous:</b> nav(bool)</li>
+				<li><b>Show pagination dot:</b> dots(bool)</li>
+				<li><b>Show Load more button:</b> load_more</li>
+			</ul>
+			<h4>Block 4: Promo Static Block</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="promo-banner hidden-xs"><a><img class="img-responsive" src="http://magesolution.com/molly/media/promobanners/banner_home_2.jpg" alt="Molly Banner Buy Theme" /></a>
+<div class="text-container text-right">
+<div class="text-hover"><span class="h1 text-desc" style="font-weight: 300;"> <span style="font-style: normal; color: #72584b;">Do You Love Us?</span> <span style="color: #444444;">Puschase This Theme!</span> </span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu pulvinar massa.</p>
+</div>
+<div class="view-more"><button class="btn btn-primary btn-lg btn-promo-banner" style="background-color: #a0522d; border-color: #A0522D;" onclick="setLocation('')"><span>Purchase</span></button></div>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+<xmp>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home1_molly_promo"}}      
+</xmp>
+			<h4>Block 5: Counter Static Block</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="number-count text-center first"><span class="icon pe-7s-smile">&nbsp;</span>
+<p class="text-desc">Happy Customers</p>
+<div class="counter">1503</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="number-count text-center"><span class="icon pe-7s-diamond">&nbsp;</span>
+<p class="text-desc">Shoes Sold</p>
+<div class="counter">1109</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="number-count text-center"><span class="icon pe-7s-coffee">&nbsp;</span>
+<p class="text-desc">Coffee Cups</p>
+<div class="counter">9193</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="number-count text-center"><span class="icon pe-7s-chat">&nbsp;</span>
+<p class="text-desc">Facebook Fans</p>
+<div class="counter">1908</div>
+</div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+<xmp>
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home3_molly_counter"}}
+</xmp>
+			<h4>Block 6: On Sale</h4>
+			<p><b>Step 1: Create Sale Attribute</b></p>
+			<p>Go to Back-End -> Menu -> Store -> Product -> Add new attribute -> Add sale attribute (Yes/No)</p>
+			<p><b>Step 2: Set Attribute</b></p>
+			<p>Go to Back-End -> Menu -> Store -> Attribute Set -> Select Groups -> Add sale attribute -> drag the attributes "Sale" from 'Unassigned Attributes' to 'Groups'</p>
+			<img src="images/attr.png"/><br/>
+			<p><b>Step 3: Reindex data</b></p>
+			<em>If you have save attribute please overlook step 1,2 and 3</em>
+			<p><b>Step 4: Update products you want to show as sale product with attribute sale</b></p>
+			<p><b>Final: Add code to cms home page</b></p>
+<xmp>
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">{{block class="MGS\Mpanel\Block\Products\Attributes" attribute="sale" title="On Sale" products_count="3" custom_class="attribute-slide" template="products/list.phtml"}}      </div>    
+</xmp>
+			<b>Custom Block list product</b>
+			<ul>
+				<li><b>Title Block:</b> title</li>
+				<li><b>Show product has attribute:</b> attribute</li>
+				<li><b>Number product to show:</b> products_count</li>
+				<li><b>Custom class:</b> attribute</li>
+			</ul>
+			<h4>Block 7: Featured</h4>
+				Follow example sale block with attribute featured
+			<h4>Block 8: New Product</h4>
+				Follow example sale block with attribute new
+			
+			<h3>4.4 Home page 4</h3>
+			<strong>All content in cms page of homepage 5 is covered by:</strong>
+<xmp>
+<div class="home4">
+</div>
+</xmp>
+			<ul>
+				<li><b>Header version:</b> Header 2</li>
+				<li><b>Layout:</b> 1 column</li>
+				<li><b>Revolution Slider:</b> slider_id="2"</li>
+			</ul>
+			<img src="images/home4.jpg"/><br/><br/>
+			<h4>Block 1: Revolution Slider Block</h4>
+			<p>You can add the widget in "Cms Page" to add revolution slider that you created.</p>
+			
+			<h4>Block 2: Service Static Block</h4>
+			<p>Create static block with code: </p>
+<xmp>
+<div class="col-md-4 col-sm-6 col-xs-12">
+<div class="service-box"><span class="icon pe-7s-box2">&nbsp;</span>
+<h5 class="title" style="color: #444444;">FREE SHIPPING ON ALL ORDRES</h5>
+<a class="text-desc" href="#">More information here </a></div>
+</div>
+<div class="col-md-4 col-sm-6 col-xs-12">
+<div class="service-box"><span class="icon pe-7s-wallet">&nbsp;</span>
+<h5 class="title" style="color: #444444;">AMAZING CUSTOMER SERVICE</h5>
+<a class="text-desc" href="#">More information here </a></div>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+<div class="service-box"><span class="icon pe-7s-delete-user">&nbsp;</span>
+<h5 class="title" style="color: #444444;">NO CUSTOMS OR DUTY FEES</h5>
+<a class="text-desc" href="#">More information here </a></div>
+</div>
+</xmp>
+			<p>Add static block to cms page as homepage</p>
+<xmp>
+<div class="container">
+<div class="row">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home1_molly_service"}}</div>
+</div>
+</xmp>
+			<h4>Block 3: Shop By Categories</h4>
+			<p>Create promo banner</p>
+			<p>Go to admin MGS -> Manage Banners then create 4 promobanners with "Effect" as "Effect 11" and content sequence is:</p>
+<xmp>
+<h2 class="cate-name">SALE OFF 60% <span class="text-desc">(9 products)</span></h2>      
+</xmp>
+<xmp>
+<h2 class="cate-name">Interior <span class="text-desc">(15 products)</span></h2>    
+</xmp>
+<xmp>
+<h2 class="cate-name">Office <span class="text-desc">(25 products)</span></h2>      
+</xmp>
+<xmp>
+<h2 class="cate-name">Fashion <span class="text-desc">(30 products)</span></h2>      
+</xmp>
+			<p>After create promobanners successfully, create a static block and add 4 promobanners to static block:</p>
+<xmp>
+<div class="promo-static padding-5">
+<div class="title-inline">
+<h3 class="heading"><span>SHOP BY CATEGORIES</span></h3>
+<div class="text-desc"><span>Trending Fashion In This Season</span></div>
+</div>
+<div class="row categories-landding">
+<div class="cate-content horizontal col-sm-6 col-xs-12">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="1" template="banner.phtml"}}</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="2" template="banner.phtml"}}</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="3" template="banner.phtml"}}</div>
+<div class="cate-content horizontal col-sm-6 col-xs-12">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="4" template="banner.phtml"}}</div>
+</div>
+</div>
+</xmp>
+			<p>Continue add static block to cms page by code follow:</p>
+<xmp>
+<div class="container">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="molly_shop_cate_promobanner"}}</div>
+</xmp>
+			<h4>Block 4 and 5: Deals</h4>
+			<p>You also create promobanner as above with content as blank and Effect 11 then add to cms page with code follow:</p>
+<xmp>
+<div class="deals-special">
+<div class="col-md-6 no-padding col-sm-6 col-xs-12">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="6" template="banner.phtml"}}</div>
+<div class="col-md-6 no-padding col-sm-6 col-xs-12">{{block class="MGS\Mpanel\Block\Products\Deals" title="Hot Deal Everyday" products_count="1" per_row="1" custom_class="" note_text="Get Free Shipping on all orders over $75 and free returns to our UK returns centre! " template="products/deals/special.phtml"}}</div>
+</div>
+</xmp>
+			<h4>Block 6: New Products</h4>
+			<p>Add the code follow to cms page: </p>
+<xmp>
+<div class="container">{{block class="MGS\Mpanel\Block\Products\Grid\NewProducts" title="NEW PRODUCTS" products_count="8" custom_class="tabs-colon" note_text="Trending Fashion In This Season" template="products/grid/new.phtml}}</div>
+</xmp>
+			<h4>Block 7 and 8: Newsletter</h4>
+			<p>Create a static block with code follow:</p>
+<xmp>
+<div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+<div class="newletter-center">
+<div class="text">
+<h3 class="heading"><span>NEWSLETTER</span></h3>
+<p>Sign up to receive the coupon 15% off for your first purchase via email and get informations about bicycle.</p>
+</div>
+{{block class="Magento\Newsletter\Block\Subscribe" template="subscribe.phtml"}} <br />
+<p class="text-desc">*Discount applies only to orders over $100</p>
+</div>
+</div>
+</xmp>		
+			<p>Create a promobanner as guide above with Effect 11 and content blank</p>
+			<p>After add the code follow to cms page:</p>
+<xmp>
+<div class="newsletter-promo">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home1_molly_newsletter"}}
+<div class="col-md-6 col-sm-6 col-xs-12 no-padding">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="5" template="banner.phtml"}}</div>
+</div>
+</xmp>
+			<h4>Block 9: From our blog</h4>
+			<p>Create a static block with code follow:</p>
+<xmp>
+<div class="title-inline">
+<h3 class="heading"><span>FROM OUR BLOG</span></h3>
+<div class="text-desc"><span>Lorem ipsum dolor sit amet</span></div>
+</div>
+<div class="padding30">&nbsp;</div>
+<div class="widget-latest-post">
+<div class="row">
+<div id="latest-post-carousel" class="latest-post-carousel">
+<div class="item blog-view-container col-md-4 col-sm-4 col-xs-12">
+<div class="latest-post-img"><a class="blog_link_img" href="#"><img class="img-responsive" src="{{media url="wysiwyg/blog_thumb_tl1_1.jpg"}}" alt="" /></a> <a class="read-more" href="#"><span class="fa fa-search">&nbsp;</span>Read more</a>
+<div class="day-desc"><span class="day">14</span> <span class="month">Dec</span></div>
+</div>
+<div class="latest-post-decs">
+<div class="latest-name"><a href="#">Another post with gallery</a></div>
+<div class="latest-date">
+<div class="post-info text-desc"><span class="user-author">Justin Nguyen</span> <span><a class="comments" href="#">1 Comment</a></span></div>
+</div>
+<p class="short-content">Cras ut magna quis metus tristique vulputate. Ut a sapien scelerisque, fermentum lorem a, aliquet mi. Ut lobortis lorem nisl, vel euismod ligula or...</p>
+</div>
+</div>
+<div class="item blog-view-container col-md-4 col-sm-4 col-xs-12">
+<div class="latest-post-img"><a class="blog_link_img" href="#"><img class="img-responsive" src="{{media url="wysiwyg/blog_thumb_tl1_2.jpg"}}" alt="" /></a> <a class="read-more" href="#"><span class="fa fa-search">&nbsp;</span>Read more</a>
+<div class="day-desc"><span class="day">14</span> <span class="month">Dec</span></div>
+</div>
+<div class="latest-post-decs">
+<div class="latest-name"><a href="#">Another post with gallery</a></div>
+<div class="latest-date">
+<div class="post-info text-desc"><span class="user-author">Justin Nguyen</span> <span><a class="comments" href="#">1 Comment</a></span></div>
+</div>
+<p class="short-content">Cras ut magna quis metus tristique vulputate. Ut a sapien scelerisque, fermentum lorem a, aliquet mi. Ut lobortis lorem nisl, vel euismod ligula or...</p>
+</div>
+</div>
+<div class="item blog-view-container col-md-4 col-sm-4 col-xs-12">
+<div class="latest-post-img"><a class="blog_link_img" href="#"><img class="img-responsive" src="{{media url="wysiwyg/blog_thumb_tl1_3.jpg"}}" alt="" /></a> <a class="read-more" href="#"><span class="fa fa-search">&nbsp;</span>Read more</a>
+<div class="day-desc"><span class="day">14</span> <span class="month">Dec</span></div>
+</div>
+<div class="latest-post-decs">
+<div class="latest-name"><a href="#">Another post with gallery</a></div>
+<div class="latest-date">
+<div class="post-info text-desc"><span class="user-author">Justin Nguyen</span> <span><a class="comments" href="#">4 Comments</a></span></div>
+</div>
+<p class="short-content">Cras ut magna quis metus tristique vulputate. Ut a sapien scelerisque, fermentum lorem a, aliquet mi. Ut lobortis lorem nisl, vel euismod ligula or...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</xmp>
+			<p>Add the code follow to cms page: </p>
+<xmp>
+<div class="container">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home4_molly_post"}}</div>
+</xmp>
+			<h4>Block 10: Brands</h4>
+			<p>Create Brands:</p>
+			<p>Go to admin MGS -> Manage Brands then click to "Add New Brand" so that create your brand</p>
+			<p>Contine add the code follow to cms page:</p>
+<xmp>
+<div class="container">{{widget type="MGS\Brand\Block\Widget\Brand" title="OUR CLIENTS" brand_ids="1,2,3,4,5,6" show_brand_name="0" view_as="owl_carousel" items="5" image_width="216" image_height="164" autoplay="1" stop_on_hover="1" navigation="1" template="widget/default.phtml"}}</div>
+</xmp>
+			<h4>Block 11: Service Block</h4>
+			<p>Create a static block with code follow:</p>
+<xmp>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="service-inline">
+<span class="icon pe-7s-wallet">&nbsp;</span>
+<h5 class="title">MONEY GUARANTEE</h5>
+<p class="text-desc">30 days money guarantee!</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="service-inline">
+<span class="icon pe-7s-magic-wand">&nbsp;</span>
+<h5 class="title">ONLINE SUPPORT</h5>
+<p class="text-desc">We support online 24/7</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="service-inline">
+<span class="icon pe-7s-rocket">&nbsp;</span>
+<h5 class="title">PAYMENT SECURE</h5>
+<p class="text-desc">Secure all your payment</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="service-inline">
+<span class="icon pe-7s-cloud-download">&nbsp;</span>
+<h5 class="title">UK FREE DELIVERY</h5>
+<p class="text-desc">Free on all orders over £99.99</p>
+</div>
+</div>
+</xmp>
+			<p>Then add the code follow to cms page:</p>
+<xmp>
+<div class="service-static" style="background-color: #292929;">
+<div class="container">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home4_molly_service"}}</div>
+</div>
+</xmp>
+			<hr class="color"/>
+			
+			<h3>4.5 Home page 5</h3>
+			<strong>All content in cms page of homepage 5 is covered by:</strong>
+<xmp>
+<div class="home5"></div>
+</xmp>
+			<ul>
+				<li><b>Header version:</b> Header 4</li>
+				<li><b>Layout:</b> 1 column</li>
+				<li><b>Revolution Slider:</b> slider_id="4"</li>
+			</ul>
+			<img src="images/home5.jpg"/><br/><br/>
+			<h4>Block 1: Revolution Slider Block</h4>
+			<p>You can add the widget in "Cms Page" to add revolution slider that you created.</p>
+			
+			<h4>Block 2: Home5 Molly Promo</h4>
+			<p>Create 3 promobanner with code follow: </p>
+			<strong>Promobanner 1: </strong>
+			<ul>
+				<li>Banner Title: Home5 Banner Fashion</li>
+				<li>Identifier: banner-fashion</li>
+				<li>Effect: Effect 10</li>
+				<li>Content: 
+<xmp>
+<h2 class="cate-name">Fashion</h2>
+<p class="text-desc">(15 products)</p>
+</xmp>
+				</li>
+			</ul>
+			<strong>Promobanner 2: </strong>
+			<ul>
+				<li>Banner Title: Home5 Banner Interior</li>
+				<li>Identifier: banner-interior</li>
+				<li>Effect: Effect 10</li>
+				<li>Content: 
+<xmp>
+<h2 class="cate-name">Interior</h2>
+<p class="text-desc">(25 products)</p>
+</xmp>
+				</li>
+			</ul>
+			<strong>Promobanner 3: </strong>
+			<ul>
+				<li>Banner Title: Home5 Banner Office</li>
+				<li>Identifier: banner-office</li>
+				<li>Effect: Effect 10</li>
+				<li>Content: 
+<xmp>
+<h2 class="cate-name">Office</h2>
+<p class="text-desc">(9 products)</p>
+</xmp>
+				</li>
+			</ul> <br />
+			
+			<p>Create a static block with code:</p>
+<xmp>
+<div class="title-inline" style="padding-left: 12px; padding-right: 12px;">
+<h3 class="heading"><span>FEATURED CATEGORIES</span></h3>
+<div class="text-desc"><span>Lorem ipsum dolor sit amet</span></div>
+</div>
+<div class="padding40">&nbsp;</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="banner-fashion" template="banner.phtml"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="banner-interior" template="banner.phtml"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="banner-office" template="banner.phtml"}}</div>  
+</xmp>
+			<p>Add the code to cms page:</p>
+<xmp>
+<div class="50">&nbsp;</div>
+<div class="container">
+<div class="row">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home5_molly_promo"}}
+</div>  
+</div>
+</div> 
+</xmp>			
+			<h4>Block 3: FEATURED PRODUCTS</h4>
+			<strong>First create a attribute with "attribute code" is "featured_product", this attribute has the "Catalog Input Type for Store Owner" field as "Yes/No" then select products "Featured Product" is yes.</strong>
+			<p>Add to cms page by code follow:</p>
+<xmp>
+<div class="padding60">&nbsp;</div>
+<div class="container">{{block class="MGS\Mpanel\Block\Products\Attributes" attribute="featured_product" title="FEATURED PRODUCTS" products_count="8" per_row="4" custom_class="attribute-slide" note_text="Lorem ipsum dolor sit amet" nav="true" dots="false" autoplay="false" template="products/slide/simple.phtml"}}</div>   
+</xmp>
+			<h4>Block 4: Promobanner</h4>
+			<p>You also create promobanner as above with content as blank and Effect 10 then go to cms page and add this promobanner by add widget:</p>
+
+			<h4>Block 5: Promobanner</h4>
+			<p>You also create promobanner as above with:</p>
+			<ul>
+				<li>Button Text: Show Now</li>
+				<li>Text Align: Middle Left</li>
+				<li>Effect: Effect 10</li>
+				<li>Content: 
+<xmp>
+<div class="text-hover">
+<p class="text-desc" style="font-size: 30px; font-style: italic; line-height: 23px;">brand-new</p>
+<span class="h1">COLLECTION</span>
+<span class="h1">2015</span>		
+</div>
+</xmp>				
+				</li>
+			</ul>
+			<p>Then add to cms page by widget.</p>
+
+			<h4>Block 6: BACK IN STOCK</h4>
+			<p>You also create a attribute similar as featured_product with attribute code is "back_in_stock" then you also select products which you want "back_in_stock" as "yes"</p>
+			<p>Then add the code follow to cms page:</p>
+<xmp>
+<div class="container">{{block class="MGS\Mpanel\Block\Products\Attributes" attribute="back_in_stock" title="BACK IN STOCK" products_count="5" per_row="5" load_more="1" note_text="Lorem ipsum dolor sit amet" custom_class="custom-class" template="products/attribute.phtml"}}</div>
+</xmp>		
+			<h4>Block 7: Service Static Block</h4>
+			<p>Create a static block with code follow:</p>
+<xmp>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="service-inline">
+<span class="icon pe-7s-wallet">&nbsp;</span>
+<h5 class="title">MONEY GUARANTEE</h5>
+<p class="text-desc">30 days money guarantee!</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="service-inline">
+<span class="icon pe-7s-magic-wand">&nbsp;</span>
+<h5 class="title">ONLINE SUPPORT</h5>
+<p class="text-desc">We support online 24/7</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="service-inline">
+<span class="icon pe-7s-rocket">&nbsp;</span>
+<h5 class="title">PAYMENT SECURE</h5>
+<p class="text-desc">Secure all your payment</p>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="service-inline">
+<span class="icon pe-7s-cloud-download">&nbsp;</span>
+<h5 class="title">UK FREE DELIVERY</h5>
+<p class="text-desc">Free on all orders over £99.99</p>
+</div>
+</div>
+</xmp>
+			<p>Add the code follow to cms page: </p>
+<xmp>
+<div class="service-static" style="background-color: #292929;">
+<div class="container">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="home4_molly_service"}}</div>
+</xmp>
+			<hr class="color"/>
+			
+			<h2>5. Static Block</h2>
+			<h3>5.1 Home2 Molly Title Logo</h3>
+			Edit static block molly_titlelogo
+			<h3>5.2 Molly social</h3>
+			<img src="images/social.png"/><br/>
+			<ul>
+				<li>Block Title: Molly social</li>
+				<li>Identifier: molly_social</li>
+				<li>Content: <br/>
+<xmp>
+	<ul class="social">
+		<li><a href="#"> <span class="tooltip-top">Facebook</span> <em class="fa fa-facebook">&nbsp;</em></a></li>
+		<li><a href="#"> <span class="tooltip-top">Twitter</span> <em class="fa fa-twitter">&nbsp;</em></a></li>
+		<li><a href="#"> <span class="tooltip-top">Instagram</span> <em class="fa fa-instagram">&nbsp;</em></a></li>
+		<li><a href="#"> <span class="tooltip-top">Dribbble</span> <em class="fa fa-dribbble">&nbsp;</em></a></li>
+		<li><a href="#"> <span class="tooltip-top">Vimeo</span> <em class="fa fa-vimeo">&nbsp;</em></a></li>
+	</ul>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.3 Home2 Molly contact phone</h3>
+			<img src="images/phone.png"/><br/>
+			<ul>
+				<li>Block Title: Home2 Molly contact phone</li>
+				<li>Identifier: molly_phone</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="phone"><em class="fa fa-phone">&nbsp;</em> +001 453 8989</div>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.4 Molly footer newsletter</h3>
+			<img src="images/newsletter.png"/><br/>
+			<ul>
+				<li>Block Title: Molly footer newsletter</li>
+				<li>Identifier: molly_ft_newsletter</li>
+				<li>Content: <br/>
+<xmp>
+	{{block class="Magento\\Newsletter\\Block\\Subscribe" name="footer.newsletter" template="Magento_Newsletter::footer-subscribe.phtml"}}
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.5 Molly footer about</h3>
+			<img src="images/aboutus.png"/><br/>
+			<ul>
+				<li>Block Title: Molly footer about</li>
+				<li>Identifier: molly_ft_about</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="footer-about">
+		<div class="block-title"><span class="h4"> <span class="title">ABOUT US</span> </span></div>
+		<div class="block-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum mauris sed sapien tristique suscipit. Nunc mollis tortor velit, at commodo nisi ullamcorper ac. Quisque id mi semper ipsum.</p>
+		</div>
+	</div>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.6 Molly footer info</h3>
+			<img src="images/info.png"/><br/>
+			<ul>
+				<li>Block Title: Molly footer info</li>
+				<li>Identifier: molly_ft_info</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="info-footer">
+		<div class="block-title">
+		<span class="h4">
+		<span class="title">INFOMATION</span>
+		<span>
+		</span></span></div>
+		<div class="block-content">
+		<ul>
+		<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> ABOUT US</a></li>
+		<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> DELIVERY INFOMATION</a></li>
+		<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> PRIVACY &amp; POLICY</a></li>
+		<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> TEMRS &amp; CONDITIONS</a></li>
+		<li><a href="#"><em class="fa fa-angle-right">&nbsp;</em> MANUFACTURES</a></li>
+		</ul>
+		</div>
+	</div>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.7 Molly footer instagram</h3>
+			<img src="images/insta.png"/><br/>
+			<ul>
+				<li>Block Title: Molly footer instagram</li>
+				<li>Identifier: molly_ft_instagram</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="instagram-footer">
+		<div class="block-title"><span class="h4"><span class="title">Instagram feeds</span></span></div>
+{{block class="MGS\\Social\\Block\\Instagram" name="instagram.feed" template="MGS_Social::instagram.phtml"}}
+	</div>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.8 Molly footer contacts</h3>
+			<img src="images/kit.png"/><br/>
+			<ul>
+				<li>Block Title: Molly footer contacts</li>
+				<li>Identifier: molly_ft_contacts</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="footer-contacts">
+		<div class="block-title"><span class="h4"><span class="title">KEEP IN TOUCH</span></span></div>
+		<div class="block-content">
+		<ul>
+		<li><em class="fa fa-map-marker">&nbsp;</em> <span class="text">PO Box 16122 Collins Street West <br /> Victoria 8007 Australia </span></li>
+		<li><em class="fa fa-phone">&nbsp;</em> <span class="text">Tel. +1 2123431725 </span></li>
+		<li><em class="fa fa-envelope-o">&nbsp;</em> <span class="text">Email. info@thememove.com</span></li>
+		</ul>
+		</div>
+	</div>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.9 Molly responsive nav</h3>
+			<img src="images/btn-res.png"/><br/>
+			<ul>
+				<li>Block Title: Molly responsive nav</li>
+				<li>Identifier: molly_responsive_nav</li>
+				<li>Content: <br/>
+<xmp>
+	<button class="btn btn-responsive-nav btn-inverse"> <em class="fa fa-bars">&nbsp;</em> </button>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.10 Share this Block</h3>
+			<img src="images/share-this.png"/><br/>
+			<ul>
+				<li>Block Title: Share this Block</li>
+				<li>Identifier: share_this_block</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="share-this-block"><span class="label-share">Share This:</span> <span class="st_sharethis_large">&nbsp;</span> 	<span class="st_facebook_large">&nbsp;</span> <span class="st_twitter_large">&nbsp;</span> <span class="st_linkedin_large">&nbsp;</span> <span class="st_pinterest_large">&nbsp;</span> <span class="st_email_large">&nbsp;</span>
+	</div>
+	<script type="text/javascript">// <![CDATA[
+	var switchTo5x=true;
+	// ]]></script>
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">// <![CDATA[
+	stLight.options({publisher: "d846940d-2e32-4b49-b61a-8df1df805d0a", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+	// ]]></script>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.11 Custom Static Block Top</h3>
+			<img src="images/static-top.png"/><br/>
+			<ul>
+				<li>Block Title: Custom Static Block Top</li>
+				<li>Identifier: custom_static_block_top</li>
+				<li>Content: <br/>
+<xmp>
+	<p>Perfect for class, work or the gym, the Wayfarer Messenger Bag is packed with pockets. The dual-buckle flap closure reveals an organizational panel, and the roomy main compartment has spaces for your laptop and a change of clothes. An adjustable shoulder strap and easy-grip handle promise easy carrying.</p>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.12 Custom Static Block Bottom</h3>
+			<img src="images/static-bottom.png"/><br/>
+			<ul>
+				<li>Block Title: Custom Static Block Bottom</li>
+				<li>Identifier: custom_static_block_bottom</li>
+				<li>Content: <br/>
+<xmp>
+	<p>Perfect for class, work or the gym, the Wayfarer Messenger Bag is packed with pockets. The dual-buckle flap closure reveals an organizational panel, and the roomy main compartment has spaces for your laptop and a change of clothes. An adjustable shoulder strap and easy-grip handle promise easy carrying.</p>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.13 Custom Col Right Block</h3>
+			<img src="images/colright.png"/><br/>
+			<ul>
+				<li>Block Title: Custom Col Right Block</li>
+				<li>Identifier: custom_col_right_block</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="service-inline"><span class="icon pe-7s-wallet">&nbsp;</span>
+		<h5 class="title">MONEY GUARANTEE</h5>
+		<p class="text-desc">30 days money guarantee!</p>
+	</div>
+	<div class="service-inline"><span class="icon pe-7s-magic-wand">&nbsp;</span>
+		<h5 class="title">ONLINE SUPPORT</h5>
+		<p class="text-desc">We support online 24/7</p>
+	</div>
+	<div class="service-inline"><span class="icon pe-7s-rocket">&nbsp;</span>
+		<h5 class="title">PAYMENT SECURE</h5>
+		<p class="text-desc">Secure all your payment</p>
+	</div>
+	<div class="service-inline"><span class="icon pe-7s-cloud-download">&nbsp;</span>
+		<h5 class="title">UK FREE DELIVERY</h5>
+		<p class="text-desc">Free on all orders over &pound;99.99</p>
+	</div>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.14 Contact Infomation Block</h3>
+			<img src="images/static-contact.png"/><br/>
+			<ul>
+				<li>Block Title: Contact Infomation Block</li>
+				<li>Identifier: contact_infomation_block</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="col-md-4 col-sm-4 col-xs-12 contact-info">
+<div class="text-center"><span class="icon pe-7s-call">&nbsp;</span>
+<p class="text-desc">Call Us</p>
+<p>1800 578 90</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 contact-info center">
+<div class="text-center"><span class="icon pe-7s-map-2">&nbsp;</span>
+<p class="text-desc">Our Location</p>
+<p>PO Box 16122 Collins Street <br /> West, Australia</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-12 contact-info">
+<div class="text-center"><span class="icon pe-7s-mail-open-file">&nbsp;</span>
+<p class="text-desc">Our Email</p>
+<p>mollytheme@example.com</p>
+</div>
+</div>
+</xmp>
+				</li>
+			</ul>
+			
+			<h3>5.15 Newsletter Popup</h3>
+			<img src="images/pnew.png"/><br/>
+			<ul>
+				<li>Block Title: Newsletter Popup</li>
+				<li>Identifier: newsletter_popup</li>
+				<li>Content: <br/>
+<xmp>
+	<div class="newsletter-popup">
+		<h3 class="color-theme">Join Our Newsletter</h3>
+		<p class="desc-popup">Subscribe to the Abc newsletter to receive timely updates from your favorite products.</p>
+		{{block class="Magento\Newsletter\Block\Subscribe" template="subscribe_popup.phtml"}}
+		<div class="checkbox text-colour-white"><label for="dont_show"> <input id="dont_show" onclick="dontShowPopup('dont_show')" type="checkbox" /> Don't show this popup again </label></div>
+	</div>
+</xmp>
+				</li>
+			</ul>
+			
+			<hr class="color"/>
+			<h2>6. Custom Style</h2>
+			<strong>To add custom style go to MGS -> Theme Setting -> Custom Style, at the 'Add Custom Style', you add below style to textarea field.</strong>
+<xmp>
+	.cms-noroute-index .page-wrapper > #maincontent.container {
+		width: 100%;
+		padding: 0;
+	}
+	.cms-noroute-index .footer {
+		margin: 0;
+	}
+	.portfolio-category-view .breadcrumbs, 
+	.portfolio-index-view .breadcrumbs
+	{
+		background-image: url('http://magesolution.com/molly2/media/wysiwyg/bg_bredcrumb_1.jpg')
+	}
+</xmp>
+			
+			<hr class="color"/>
+			<h2>7. Theme Settings</h2>
+			<h3>7.1 General Setting</h3>
+			<p>Go go admin MGS -> General Setting</p>
+			<img src="images/catalog.png"/><br/>
+			<ul>
+				<li><b>Number of products per row:</b> 2,3,4,6</li>
+				<li><b>Featured Product Attribute:</b> attribute to set featured products</li>
+				<li><b>Best Selling Product Attribute:</b> attribute to set best selling products</li>
+				<li><b>Product Picture Ratio:</b> set ratio for all product picture</li>
+				<li><b>New Label:</b> label for New products</li>
+				<li><b>Sale Label:</b> label for Sale products</li>
+				<li><b>Hide Add to Wishlist button:</b> show or hide wishlist button</li>
+				<li><b>Hide Add to Compare button:</b> show or hide compare button</li>
+				
+			</ul>
+			
+			<img src="images/product-detail.png"/><br/>
+			<ul>
+				<li><b>Show Sku:</b> show or hide sku</li>
+				<li><b>Show Reviews Summary:</b> show or hide reviews summary</li>
+				<li><b>Show Add to Wishlist Link:</b> show or hide add to wishlist link</li>
+				<li><b>Show Add to Compare Link:</b> show or hide add to compare link</li>
+				<li><b>Show Short Description:</b> show or hide short description</li>
+				<li><b>Show Upsell Products:</b> show or hide upsell products</li>
+			</ul>
+			
+			<img src="images/product-tabs.png"/><br/>
+			<ul>
+				<li><b>Show Description:</b> show or hide description tab</li>
+				<li><b>Show Additional Information:</b> show or hide additional information tab</li>
+				<li><b>Show Reviews:</b> show or hide reviews tab</li>
+			</ul>
+			
+			<img src="images/customer-links.png"/><br/>
+			<p>Show or hide customer navigation links</p>
+			<img src="images/customer-nav.png"/><br/>
+			<br/><br/>
+			
+			
+			<hr class="color"/>
+			<h3>7.2 Theme Setting</h3>
+			<p>Go go admin MGS -> Theme Setting</p>
+			<img src="images/theme-general-setting.png"/><br/>
+			<ul>
+				<li><b>Width:</b> max width of pages (1024px - 1200px - 166px - full width)</li>
+				<li><b>Sticky menu:</b> Enable sticky menu or not</li>
+				<li><b>Display back to top icon:</b> Show or hide back to top icon</li>
+				<li><b>Enable Popup Newsletter:</b> Show or hide newsletter popup</li>
+			</ul>
+			
+			<img src="images/background.png"/><br/>
+			<p>Options for background of pages, you can to use color code or images to set background</p>
+			<br/>
+			<img src="images/fonts.png"/><br/>
+			<p>Options for fonts of page elements: default font, heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, price, menu</p>
+			<p>We use google font for them.</p>
+			
+			<img src="images/custom-style.png"/><br/>
+			<p>Option allow you to add new font and add custom style for your pages (if you know how to use style sheet)</p>
+			
+			<hr class="color"/>
+			<h3>7.3 Color Setting</h3>
+			<p>Go go admin MGS -> Color Setting</p>
+			<img src="images/color-general.png"/><br/>
+			<p>Set default color for theme</p>
+			<br/>
+			
+			<img src="images/header-color.png"/><br/>
+			<p>Set color for header sections</p>
+			<br/>
+			<img src="images/top-links.png"/><br/>
+			<p>Color for background, text, links... of top links section</p>
+			<br/>
+			<img src="images/middle-header.png"/><br/>
+			<p>Set background for middle header content</p>
+			<br/><br/>
+			
+			<img src="images/top-search.png"/><br/>
+			<p>Set color for top search elements</p>
+			<br/><br/>
+			
+			<img src="images/top-cart.png"/><br/>
+			<p>Set color for top cart elements</p>
+			<br/><br/>
+			
+			<img src="images/menu.png"/><br/>
+			<p>Set color for background, links of menu items</p>
+			<br/><br/>
+			
+			<img src="images/main-color.png"/><br/>
+			<p>Set color for text, link, buttons of main content</p>
+			<br/><br/>
+			
+			
+			<hr class="color"/>
+			<h2>8. How To</h2>
+			
+			<h3>8.1 Setup Multi Languages</h3>
+			<p>To setup multi languages, please see example here: <a href="http://magento.stackexchange.com/questions/98291/magento-2-different-languages-for-website/98307#98307" target="_blank">http://magento.stackexchange.com/questions/98291/magento-2-different-languages-for-website/98307#98307</a></p>
+			
+			<hr class="color"/>
+			<h3>8.2 Setup Currency</h3>
+			
+			<p>To setup currency, you can go to <b>Stores -> Configuration</b>, choose Currency Setup tab. Set Allowed Currencies are the currency you want on your store.</p>
+			<p>Go to <b>Stores -> Currency Rates</b>, press import. Wait for the system to import currency exchange rate then press <b>Save</b>.</p> 
+			<p>Go to <b>System -> Cache Management</b> and refresh the cache. Now you should see currency dropdown on the top left corner.</p>
+			
+			
+			<br/><br/><br/>
+			<hr class="color"/>
+			<h3>8.3 Enable Translate Inline</h3>
+			<p>To enable translate inline for any store view, go to <b>Stores -> Configuration</b>, Click to <b>Advanced</b> tag on left menu, click to <b>Developer</b>
+			<p>Switch to store view you want to translate at top of page.</p>
+			<p>At Translate Inline section, choose "<b>Yes</b>" for "<b>Enabled for Storefront</b>"</p>
+			</p>
+			<br/><br/>
+			
+			<hr class="color"/>
+			<h3>8.4 Setting Megamenu</h3>
+			
+			<h4>Add new Megamenu items</h4>
+			<p>From admin panel, go to Mage MGS -> Megamenu -> Manage Megamenu Items -> Click button "Add Megamenu Item"</p>
+			<br/>
+			<p><b>Setting</b></p>
+			<img class="img-border" src="images/megamenu_st_2.png"/><br/>
+			<ul>
+				<li><b>Label: </b> Label show on menu.</li>
+				<li><b>Link: </b> Url of this</li>
+				<li><b>Position: </b> Position on menu.</li>
+				<li><b>Columns: </b> Column sub menu of this.</li>
+				<li><b>Custom Class: </b> If you want add orther style for this.</li>
+				<li><b>Static Content: </b> Add content to sub menu of this</li>
+			</ul>
+			<p><b>Custom Setting</b></p>
+			<ul>
+				<li><b>Catalog Category: </b>
+					<ul>
+						<li><b>Menu Type: </b> Catalog Category</li>
+						<li><b>Categories: </b> Choose Categories to show
+							<img class="img-border" src="images/megamenu_st_3.png"/><br/>
+						</li>
+						<li><b>Static Contents: </b><br/>
+							<img class="img-border" src="images/megamenu_st_4.png"/><br/>
+							<ul>
+								<li><b>Top Content: </b> Content on top megamenu</li>
+								<li><b>Bottom Content: </b>Content on bottom megamenu</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><b>Static Content: </b>
+					<ul>
+						<li><b>Menu Type: </b> Static Content</li>
+						<li><b>Static Contents: </b>
+							<img class="img-border" src="images/megamenu_st_5.png"/><br/>
+						</li>
+					</ul>
+				</li>
+				<li><b>Example Megamenu on Molly theme: </b>
+					<ul>
+						<li><b>Menu "Men": </b>
+							<img class="img-border" src="images/megamenu_st_content.png"/><br/>
+						</li>
+						<li><b>Menu "Women": </b><br /><br />
+						<p><b>Code: </b></p>
+							<xmp>
+<div class="mega-menu-content">
+<div class="row">
+<div class="col-md-9">
+<div class="row">
+<div class="nav-1">
+<div class="col-md-4">
+<ul>
+<li class="level1"><a href="{{store url=""}}women/shoes.html">Shoes</a>
+<span class="toggle-menu visible-xs-block visible-sm-block"><i class="fa fa-plus">&nbsp;</i><i class="fa fa-minus">&nbsp;</i></span>
+<ul>
+<li class="level2"><a href="{{store url=""}}women/shoes/rings.html">Rings</a></li>
+<li class="level2"><a href="{{store url=""}}women/shoes/shapewear.html">Shapewear</a></li>
+<li class="level2"><a href="{{store url=""}}women/shoes/sundresses.html">Sundresses</a></li>
+<li class="level2"><a href="{{store url=""}}women/shoes/cooktail.html">Cooktail</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul>
+<li class="level1"><a href="{{store url=""}}women/shirts.html">shirts</a>
+<span class="toggle-menu visible-xs-block visible-sm-block"><i class="fa fa-plus">&nbsp;</i><i class="fa fa-minus">&nbsp;</i></span>
+<ul>
+<li class="level2"><a href="{{store url=""}}women/shirts/clothing.html">Clothing</a></li>
+<li class="level2"><a href="{{store url=""}}women/shirts/hats.html">Hats</a></li>
+<li class="level2"><a href="{{store url=""}}women/shirts/hats.html">Outerwear Jackets</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul>
+<li class="level1"><a href="{{store url=""}}women/pants.html">Pants &amp; Denim</a>
+<span class="toggle-menu visible-xs-block visible-sm-block"><i class="fa fa-plus">&nbsp;</i><i class="fa fa-minus">&nbsp;</i></span>
+<ul>
+<li class="level2"><a href="{{store url=""}}women/pants/scarves.html">Scarves</a></li>
+<li class="level2"><a href="{{store url=""}}women/pants/pleats.html">Pleats</a></li>
+<li class="level2"><a href="{{store url=""}}women/pants/cuffs.html">Cuffs</a></li>
+<li class="level2"><a href="{{store url=""}}women/pants/fly.html">Fly</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear">&nbsp;</div>
+<div class="nav-2">
+<div class="col-md-4">
+<ul>
+<li class="level1"><a href="{{store url=""}}woment/dresses.html">Dresses</a>
+<span class="toggle-menu visible-xs-block visible-sm-block"><i class="fa fa-plus">&nbsp;</i><i class="fa fa-minus">&nbsp;</i></span>
+<ul>
+<li class="level2"><a href="{{store url=""}}women/dresses/special-occasion.html">Special Occasion</a></li>
+<li class="level2"><a href="{{store url=""}}women/dresses/casual.html">Casual</a></li>
+<li class="level2"><a href="{{store url=""}}women/dresses/work-dresses.html">Work Dresses</a></li>
+<li class="level2"><a href="{{store url=""}}women/dresses/fit-flare.html">Fit &amp; Flare</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul>
+<li class="level1"><a href="{{store url=""}}women/coats.html">Coats</a>
+<span class="toggle-menu visible-xs-block visible-sm-block"><i class="fa fa-plus">&nbsp;</i><i class="fa fa-minus">&nbsp;</i></span>
+<ul>
+<li class="level2"><a href="{{store url="women/coats/classic-trench.html"}}">Classic Trench</a></li>
+<li class="level2"><a href="{{store url="women/coats/bright-color.html"}}">Bright Color</a></li>
+<li class="level2"><a href="{{store url="women/coats/sharp-blazer.html"}}">Sharp Blazer</a></li>
+<li class="level2"><a href="{{store url="women/coats/raincoat.html"}}"> Raincoat</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<ul>
+<li class="level1"><a href="{{store url="women/jeans.html"}}">Jeans</a>
+<span class="toggle-menu visible-xs-block visible-sm-block"><i class="fa fa-plus">&nbsp;</i><i class="fa fa-minus">&nbsp;</i></span>
+<ul>
+<li class="level2"><a href="{{store url="women/jeans/rigid.html"}}">Rigid</a></li>
+<li class="level2"><a href="{{store url="women/jeans/denim.html"}}">Denim</a></li>
+<li class="level2"><a href="{{store url="women/jeans/slim-illusion.html"}}">Slim Illusion</a></li>
+<li class="level2"><a href="{{store url="women/jeans/twill.html"}}">Twill</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3"><span class="custom-img"><img src="{{media url="wysiwyg/banner-women.png"}}" alt="" /></span></div>
+</div>
+</div>
+</xmp>
+<br/><br/>
+<p><b>Image Demo: </b></p>
+							<img class="img-border" src="images/megamenu_st_content1.png"/><br/>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			
+			function scrollToEl(el){
+				$('a[href="'+el+'"]').click();
+			}
+			
+			$(document).ready(function() {
+				$('#toc').toc();
+				$(".various").fancybox({
+					'transitionIn'	: 'none',
+					'transitionOut'	: 'none',
+					maxWidth: 1000,
+					maxHeight: 800,
+					fitToView: false,
+					width: '90%',
+					height: '90%',
+					autoSize: false,
+					closeClick: false,
+					openEffect: 'none',
+					closeEffect: 'none'
+				});
+			});
+		</script>
+	</body>
+</html>
